@@ -1,0 +1,154 @@
+
+
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding-bottom: 80px;
+}
+
+.cardWrapper {
+  flex: 1 1 calc(50% - 24px);
+  max-width: 280px;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  zoom: 0.75;
+}
+
+
+
+.cardWrapper:hover {
+  transform: translateY(-4px);
+}
+
+.cardImage {
+  height: 250px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.cardImageWrapper {
+  position: relative; /* 이게 꼭 있어야 함 */
+}
+
+.ddayBadge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 0;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: blue; /* 기본: 접수중 */
+}
+
+.urgent {
+  background-color: #ff0707 !important;
+  color: white !important;
+}
+
+.urgentCard {
+  background-color: #fff5f5;
+  box-shadow: 0 0 10px rgba(255, 77, 79, 0.3);
+}
+
+.ddayCornerText {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #d32f2f; /* 빨간색 */
+}
+
+.cardTitleLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;       /* 줄바꿈 방지 */
+  overflow: hidden;          /* 넘치면 잘라내기 */
+  text-overflow: ellipsis;   /* 생략 부호 (...) */
+}
+
+.ddayBadgeText {
+  font-size: 14px;
+  font-weight: bold;
+  color: #d32f2f;
+  flex-shrink: 0;            /* D-day는 줄어들지 않게 */
+}
+
+/* 마감 뱃지 */
+.ddayBadge.expired {
+  background-color: #494949; /* 회색 배경 */
+  color: #ffffff;            /* 다크 그레이 텍스트 */
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sortResultBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #fff;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

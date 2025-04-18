@@ -1,0 +1,631 @@
+/* 전체 컨테이너 정리 */
+.contest-container {
+  padding: 30px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 카드 형태 */
+.contest-card {
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+}
+
+/* 제목 */
+.contest-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: left;
+}
+
+/* 상단 영역 */
+.contest-top-section {
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* 이미지 */
+.contest-image {
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+}
+.contest-image img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* 정보 테이블 */
+.contest-info-table {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 8px;
+  flex: 1;
+}
+
+/* 라벨-값 row */
+.info-row {
+  display: flex;
+  font-size: 15px;
+  gap: 10px;
+}
+.info-label {
+  color: #666;
+  min-width: 90px;
+  font-weight: 600;
+  text-align: right;
+}
+.info-value {
+  font-weight: 500;
+  color: #333;
+}
+
+/* 태그 */
+.contest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.tag {
+  padding: 5px 10px;
+  background: #e8f0fe;
+  color: #1976d2;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* 탭 */
+.contest-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 16px;
+  border-bottom: 2px solid #e0e0e0;
+}
+.tab {
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.tab.active {
+  border-bottom: 2px solid #1976d2;
+  color: #1976d2;
+}
+
+/* 상세 내용 */
+.contest-content {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* 섹션 박스 */
+.section {
+  background: #f8f9fc;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 섹션 제목 */
+.section-title {
+  font-size: 18px;
+  color: #1976d2;
+  font-weight: 700;
+  margin-top: 14px;
+  border-left: 5px solid #1976d2;
+  padding-left: 12px;
+}
+
+/* 리스트 항목 */
+.section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.section-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 14.5px;
+  color: #333;
+}
+.section-list li::before {
+ 
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1976d2;
+}
+/***************************************************************************/
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  position: relative;
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.modal-form input,
+.modal-form select {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+.modal-form textarea {
+  width: 100%;
+  max-width: 500px;
+  height: 120px;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border 0.2s;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus,
+.modal-form select:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.modal-form .modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-buttons button[type="submit"] {
+  background-color: #1976d2;
+  color: white;
+}
+
+.modal-buttons button[type="button"] {
+  background-color: #f1f1f1;
+  color: #444;
+}
+
+.modal-buttons button:hover {
+  opacity: 0.9;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+  transition: 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: #000;
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+/**************************** 팀 카드 ************************************/
+
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.team-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: gold;
+  color: #000;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.team-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.team-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eee;
+  object-fit: cover;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.team-tag.tech-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 4px;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.team-tag.tech {
+  color: #228be6;
+  font-weight: 500;
+  border: 1px solid #a5d8ff;
+}
+
+
+.team-tag {
+  margin-right: 8px;
+  color: #888;
+}
+
+.team-count {
+  font-weight: 500;
+  font-size: 14px;
+  color: #222;
+}
+
+.create-team-btn {
+  background-color: #0272eb;
+  color: white;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  display: block;
+  margin-left: auto;
+}
+
+.create-team-btn:hover {
+  background-color: #0056b3;
+}
+
+.checkbox-group {
+  margin-bottom: 16px;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.checkbox-item {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+
+/********공모전 이미지 상세보기**********/
+.image-viewer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: auto;
+}
+
+.image-viewer-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.image-viewer {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-right: 20px; /* ← 전체적으로 살짝 왼쪽 이동 */
+}
+
+.form-row label {
+  display: inline-block;
+  width: 120px;        /* ✅ label 고정 너비 */
+  font-weight: 600;
+  text-align: right; 
+  padding-right: 10px;
+}
+
+.form-row select,
+.form-row input,
+.form-row textarea {
+  flex: 1;              /* ✅ 입력 필드가 남은 공간 차지 */
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+/***************삭제 수정****************/
+
+.team-modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #1976d2;
+  color: white;
+}
+
+.delete-button {
+  background-color: #e53935;
+  color: white;
+}
+
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .contest-top-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contest-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 16px;
+  }
+}
+
+
+
+
+
+
+/* 버튼 영역 */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.left-half {
+  flex: 1;
+}
+
+.right-half {
+  display: flex;
+  gap: 8px;
+}
+
+/* 공통 버튼 스타일 */
+.chat-button,
+.edit-button,
+.delete-button {
+  font-size: 14px;
+  padding: 8px 12px; /* 높이 ↓ */
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+
+/* 채팅 버튼 */
+.chat-button {
+  width: 100%;
+  background-color: #1976d2;
+  color: white;
+}
+
+.chat-button:hover {
+  background-color: #1565c0;
+}
+
+/* 수정 버튼 */
+.edit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #0062cc;
+}
+
+/* 삭제 버튼 */
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.tag-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tag-title {
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.tag-chip {
+  background-color: #f5f5f5;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #d0d0d0;
+}

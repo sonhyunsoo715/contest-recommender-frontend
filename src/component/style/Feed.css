@@ -1,0 +1,15 @@
+.feed-container {
+    padding-top: 20px;
+  }
+  
+  .feed-card {
+    margin-bottom: 20px;
+    border-radius: 0; /* 각지게 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .feed-card img {
+    object-fit: cover;
+  }
+  

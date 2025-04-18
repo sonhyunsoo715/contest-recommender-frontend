@@ -1,0 +1,21 @@
+/* 헤더 전체 스타일 */
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: 	#1c2d8c;
+  padding: 0 16px;
+  height: 64px;
+}
+
+/* 로고 */
+.logo img {
+  height: 42px;
+  object-fit: contain;
+}
+
+/* 오른쪽 아이콘 정렬 */
+.icon-box {
+  display: flex;
+  align-items: center;
+}

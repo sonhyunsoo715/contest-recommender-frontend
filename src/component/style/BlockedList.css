@@ -1,0 +1,46 @@
+.blocked-container {
+  max-width: 380px;
+  height: 75vh;
+  margin: 20px auto;
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", "Noto Sans KR", sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+}
+  
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .avatar {
+    font-size: 32px;
+    color: #444;
+  }
+  
+  .username {
+    font-size: 15px;
+    color: #333;
+  }
+  

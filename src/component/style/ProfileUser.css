@@ -1,0 +1,64 @@
+.profile-container {
+    max-width: 380px;
+    height: 75vh;
+    margin: 20px auto;
+    padding: 30px 25px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  .set {
+    font-size: 15px;
+    color: #6B7280;
+    margin: 20px 0 25px;
+  }
+  
+  .button-container,
+  .btn {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .user-action-button {
+    background-color: #2979ff;
+    color: white;
+    border-radius: 24px;
+    font-weight: bold;
+    text-transform: none;
+    padding: 7px;
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+  }
+  
+  .user-action-button:hover {
+    background-color: #1565c0;
+  }
+  
+  
+  
+  
+  .out {
+    padding: 12px 0;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #6b6b6b;
+    transition: color 0.2s ease;
+    position: absolute; /* 절대 위치 지정 */
+    bottom: 100; /* 화면 하단 */
+    right: 30px; /* 화면 왼쪽 */
+    width: auto; /* 버튼 크기를 콘텐츠에 맞게 조정 */
+    font-weight: bold;
+  }
+  
+  

@@ -1,0 +1,96 @@
+.chatlist-container {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+
+
+.add-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: #f1f1f1;
+  border-radius: 8px;
+  margin: 20px 15px 10px;
+}
+
+.search-icon {
+  color: gray;
+  margin-right: 8px;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.chatlist {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.chat-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 1px solid #858585; 
+}
+
+.chat-info {
+  flex: 1;
+}
+
+.chat-name {
+  font-weight: bold;
+}
+
+.chat-msg {
+  font-size: 14px;
+  color: #666;
+}
+
+.chat-time {
+  font-size: 12px;
+  color: gray;
+}
+
+/* 뱃지 */
+.new-badge {
+  background-color: rgb(38, 77, 252);
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+  align-self: center;
+}

@@ -1,0 +1,95 @@
+.account-delete-container {
+  max-width: 380px;
+  height: 75vh;
+  margin: 20px auto;
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", "Noto Sans KR", sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+}
+
+
+/* 상단 텍스트 (제목) */
+.set {
+  font-size: 15px;
+  color: #6B7280;
+  margin: 20px 0 25px;
+}
+
+.icon-wrapper {
+  margin-top: 60px;   /* ← 여기로 아이콘을 아래로 */
+  display: flex;
+  justify-content: center;
+}
+
+.icon-delete {
+  font-size: 80px !important;
+  color: #3b3b3b;
+  margin-bottom: 20px;
+}
+
+/* 안내 문구 */
+.account-delete-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.account-delete-container p {
+  font-size: 14px;
+  color: #4B5563;
+  line-height: 1.5;
+  margin: 0 0 30px;
+}
+
+/* 버튼 컨테이너 */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* 버튼 스타일 - 공통 */
+.btn.check2 {
+  background-color: #9CA3AF;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 18px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.btn.check2:hover {
+  background-color: #6B7280;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 취소 버튼 */
+.btn.cancel {
+  background-color: #4A90E2;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 18px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.btn.cancel:hover {
+  background-color: #3A78C2;
+}
+

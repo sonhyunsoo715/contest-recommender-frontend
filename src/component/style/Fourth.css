@@ -1,0 +1,169 @@
+.main-container {
+  max-width: 440px;  /* 200px * 2 + gap 고려 */
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px 8px;
+  }
+  
+  .profile-avatar {
+    width: 80px !important;
+    height: 80px !important;
+    margin-right: 16px;
+  }
+  
+  .nickname {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+    text-align: left;
+  }
+  
+  .follow-text {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .profile-bio {
+    padding: 10px 24px;
+    text-align: left;
+  }
+  
+  .bio-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .write-button {
+    background-color: #2979ff !important;
+    border-radius: 24px !important;
+    text-transform: none !important;
+    font-weight: bold !important;
+  }
+
+  /*보유 기술 역량 부터*/
+  .profile-tags {
+    padding: 15px;
+    text-align: left;
+    background-color:hsl(218, 73%, 96%);
+    border-radius: 20px;
+    border :1px solid hsl(216, 100%, 89%);
+  }
+  .profile-tags2 {
+    padding: 0 24px;
+    text-align: left;
+  }
+
+  .profile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    border-top: 1px solid #ddd;
+    background-color: white;
+    z-index: 100;
+  }
+  
+  .profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+  }
+  
+  .post-image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    background-color: #eee;
+  }
+  
+  .post-caption-box {
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .preview-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* 프로필 */
+  /* 게시글 카드 컨테이너 */
+
+/* 게시글 이미지 */
+/* 피드 카드 하나의 스타일 */
+/* 피드 카드 박스 전체 레이아웃 */
+/* 작성한 게시글 섹션 정렬 */
+/* 게시글 섹션 */
+
+
+/* 게시글 카드 그리드 */
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 정확히 2열 */
+  gap: 16px; /* 카드 간 간격 */
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+/* 게시글 카드 */
+.feed-card {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 정사각형 카드 */
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.feed-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* 내용 */
+.feed-content {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  word-break: break-word;
+}
+
+.custom-z-index {
+  z-index: 1500 !important; /* MUI Dialog보다 크게 설정 */
+}

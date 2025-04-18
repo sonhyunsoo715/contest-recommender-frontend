@@ -1,0 +1,5 @@
+# Handle line endings
+* text=auto
+
+# Do NOT normalize line endings in node_modules
+node_modules/** -text
