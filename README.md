@@ -6,5 +6,5 @@
 
 - **Frontend**: React, MUI  
 - **Backend**: Spring Boot, MySQL  
-- **Communication**: REST API, WebSocket  
+- **Communication**: WebSocket  
 - **Version Control**: Git, GitHub  
