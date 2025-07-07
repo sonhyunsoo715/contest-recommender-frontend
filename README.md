@@ -4,7 +4,7 @@
 
 ## 🛠️ 사용 기술 스택
 
-- Frontend: React, MUI
-- Backend: Spring Boot, MySQL
-- 통신: REST API, WebSocket
-- 배포: GitHub
+- **Frontend**: React, MUI  
+- **Backend**: Spring Boot, MySQL  
+- **Communication**: REST API, WebSocket  
+- **Version Control**: Git, GitHub  
